@@ -9,7 +9,7 @@
                         <span></span>
                     </li>
                     <li>
-                        <a class="icon-page-account" href="profile.php">
+                        <a class="icon-page-account" href="editProfile.php">
                             <span>Účet</span>
                         </a>
                         <span></span>

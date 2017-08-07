@@ -12,8 +12,10 @@
         $verifypassword = $_POST['verifypassword'];
         if($newpassword == $verifypassword) {
             $update = $profile->update($username,$email,$oldpassword,$newpassword,$verifypassword);
+            header("location: editProfile.php");
+        } else {
+            echo '<div class="error-message">Nově zadaná hesla nesouhlasí</div>';
         }
-        header("location: editProfile.php");
     }
 ?>
 <form action="" method="POST">

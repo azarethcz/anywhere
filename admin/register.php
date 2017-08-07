@@ -50,7 +50,7 @@
         if ($user->checkPassword($password,$confirm_password)){
             $register = $user->create($username,$email,$password);
             if($register) {
-                header("location: login.php?success");
+                header("location: login.php?registered=true");
             }
         } else {
             echo '<div class="error-message">Hesla se neshodují</div>';

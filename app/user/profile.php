@@ -26,8 +26,6 @@ class Profile {
            $this->database->query($sql2,$paramsOld);              
         } elseif($this->verifyPassword($oldpassword)){
             $this->database->query($sql,$paramsNew);
-        } else {
-            return '<div class="error-message">Staré heslo nesouhlasí</div>';
         }
     }
     

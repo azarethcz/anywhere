@@ -42,6 +42,12 @@
         <div class="flex-column">
 <?php include_once 'templates/content.php'; ?>
 <?php 
+    // @ potlačuje chyby - v tomto případě GET nevypisuje chybějící index
+    if(@$_GET['registered'] == true) {
+        echo '<div class="succesful-message">Registrace proběhla úspěšně.</div>';
+    } else {
+        
+    }
     
     if(isset($_POST['login'])) {
         $username = $valid->checkInput($_POST['username']);
