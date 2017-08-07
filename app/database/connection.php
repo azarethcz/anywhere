@@ -2,9 +2,6 @@
 
 namespace CMS\Database;
 
-/*
- * Database connection class
- */
 class Connection {
     
     /*
@@ -17,7 +14,7 @@ class Connection {
     }
     
     /*
-     * 
+     * @return database connection
      */
     public function connect() {
         try {
