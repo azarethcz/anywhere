@@ -30,6 +30,7 @@
                         </a>
                         <ul class="navigation-submenu">
                             <li><a href="#">Správa Majetku</a></li>
+                            <li><a href="#">Školení</a></li>
                         </ul>
                     </li>
                     <li>
