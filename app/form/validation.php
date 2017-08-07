@@ -16,7 +16,7 @@ class Validation {
     }
     
     
-      public function deleteDiacritics($text) {
+    public function deleteDiacritics($text) {
 	$trans = array(
             'À'=>'A','Á'=>'A','Â'=>'A','Ã'=>'A','Ä'=>'A','Å'=>'A','Ç'=>'C','È'=>'E',
             'É'=>'E','Ê'=>'E','Ë'=>'E','Ì'=>'I','Í'=>'I','Î'=>'I','Ï'=>'I','Ñ'=>'N',

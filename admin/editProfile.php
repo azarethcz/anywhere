@@ -10,11 +10,17 @@
         $oldpassword = $_POST['oldpassword'];
         $newpassword = $_POST['newpassword'];
         $verifypassword = $_POST['verifypassword'];
-        if($newpassword == $verifypassword) {
-            $update = $profile->update($username,$email,$oldpassword,$newpassword,$verifypassword);
+        if(!empty($oldpassword && $newpassword && $verifypassword)){
+            if($newpassword == $verifypassword) {
+                $update = $user->update($username,$email,$oldpassword,$newpassword,$verifypassword);
+                header("location: editProfile.php");
+            } else {
+                echo '<div class="error-message">Nově zadaná hesla nesouhlasí</div>';
+            }
+        } elseif(empty($oldpassword && $newpassword && $verifypassword)) {
+            $update = $user->update($username,$email);
             header("location: editProfile.php");
-        } else {
-            echo '<div class="error-message">Nově zadaná hesla nesouhlasí</div>';
+            
         }
     }
 ?>

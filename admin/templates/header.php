@@ -13,7 +13,6 @@
     $user = new User($database);
     $article = new Article($database);
     $valid = new Validation();
-    $profile = new Profile($database);
     
     if(isset($_GET['logout'])) {
         $user->logout();

@@ -6,13 +6,11 @@
                         <a class="icon-page-news" href="">
                             <span>Novinky</span>
                         </a>
-                        <span></span>
                     </li>
                     <li>
                         <a class="icon-page-account" href="editProfile.php">
                             <span>Účet</span>
                         </a>
-                        <span></span>
                         <ul class="navigation-submenu">
                             <li><a href="editProfile.php">Upravit účet</a></li>
                         </ul>
@@ -21,7 +19,6 @@
                         <a class="icon-page-account" href="articles.php">
                             <span>Obsah</span>
                         </a>
-                        <span></span>
                         <ul class="navigation-submenu">
                             <li><a href="viewArticles.php">Zobrazení článků</a></li>
                             <li><a href="createArticle.php">Přidat Článek</a></li>
@@ -31,7 +28,9 @@
                         <a class="icon-page-moduls" href="">
                             <span>Moduly</span>
                         </a>
-                        <span></span>
+                        <ul class="navigation-submenu">
+                            <li><a href="#">Správa Majetku</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="" class="icon-page-contacts">

@@ -17,11 +17,34 @@ class User implements IUser {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT, ["cost" => 12]);
         $sql = 'INSERT INTO users(username, email, password) VALUES (?,?,?)';
         $params = array($username,$email,$hashed_password);
-            if($this->exist($username,$email)) {
-                return $this->database->query($sql, $params);
-            }
+        if($this->exist($username,$email)) {
+            return $this->database->query($sql, $params);
+        }
         echo '<div class="error-message">Uživatelské jméno nebo email již existuje.</div>';
         return false;
+    }
+    
+     public function show() {
+        $sql = 'SELECT * FROM users';
+        return $this->database->run($sql);
+    }
+    
+    public function update($username,$email,$password) {
+        $sql = 'UPDATE users set username = ?, email = ?, password = ? WHERE id = ?';
+        $params = [$username,$email, password_hash($newpassword,PASSWORD_BCRYPT,["cost" => 12]),$_SESSION['id']];
+        if(empty($oldpassword && $newpassword && $verifypassword)) {
+           $this->database->query($sql,$params = [$username,$email,$newpassword = null,$_SESSION['id']]);              
+        } elseif($this->verifyPassword($oldpassword)) {
+            $this->database->query($sql,$params);
+        }
+    }
+    
+    public function verifyPassword($oldPassword) {
+        $sql = 'SELECT * FROM users';
+        $hash = $this->database->fetch($sql);
+        if(password_verify($oldPassword, $hash['password'])) {
+            return true;
+        }
     }
     
     public function login($username,$password) {
