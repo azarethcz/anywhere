@@ -1,3 +1,3 @@
 # cms
 
-Test
+- Testing CMS for learning PHP
