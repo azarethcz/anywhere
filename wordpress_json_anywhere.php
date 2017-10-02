@@ -7,9 +7,10 @@
         $export = json_decode($body);
         if(!empty($export)) {
             foreach($export->result->data->tab as $article) {
-                echo '<article id="'.$article->id.'">';
+                echo '<article>';
                         echo '<h3>'.$article->type->name.'</h3>';                                      
-                        echo '<span>'.$article->published_date.'</span>';                      
+//                        echo '<p>'.$article->description.'</p>';
+                        echo '<img src="http://my.adamapp.com/'.$article->menu->image->src.'">';
                 echo '</article>';
             }
     }
